@@ -6,6 +6,30 @@
 </head>
 
 <body>
-  <h1> Building Blocks for our project </h1>
+  <h1> Dados RVENDPRO </h1>
+
+  <table>
+  <thead>
+    <tr>
+      <th >Alm</th>
+      <th >Descricao</th>
+      <th >Nr. Minuta</th>
+      <th >Nr. Contrato</th>
+      <th >Dt. Venda</th>
+      <th >Vlr. Contrato</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in data %}
+    <tr>
+      <td>{{item.cd_almoxarifado}}</td>
+      <td>{{item.no_descricao}}</td>
+      <td>{{item.nr_minuta}}</td>
+      <td>{{item.nr_contrato}}</td>
+      <td>{{item.dt_venda}}</td>
+      <td>{{item.vl_cont}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </body>
 </html>
