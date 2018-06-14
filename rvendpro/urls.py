@@ -15,11 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import rvendpro.core.views
-import rvendpro.staging.views
+from django.conf.urls import url
+from rvendpro.core.views import TabVendProView
 
 urlpatterns = [
-    path('', rvendpro.core.views.home),
+    #path('', rvendpro.core.views.home),
+    path('', TabVendProView.as_view()),
     #path('staging/', rvendpro.staging.views.home),
     path('admin/', admin.site.urls),
 ]
+
+# urls.py
+
+#urlpatterns = [
+#    url(r'^tabvendpro/$', TabVendProView.as_view()),
+#]

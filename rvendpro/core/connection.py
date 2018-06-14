@@ -1,5 +1,10 @@
 import psycopg2
 
+HOST = '172.16.2.89'
+DBNAME = 'dbaimp'
+PORT = 5457
+USER = 'usr_aplicacao'
+PASSWORD = 'aplicacao'
 
 # Create your views here.
 def get_data():
