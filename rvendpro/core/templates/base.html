@@ -1,11 +1,23 @@
 {% load staticfiles %}
 
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Project</title>
+    <meta charset="UTF-8">
+    <title>RVendPro Project 2</title>
 </head>
 <body>
+<h1>OK ! </h1>
 {% block content %}{% endblock %}
 </body>
 </html>

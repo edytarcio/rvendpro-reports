@@ -14,8 +14,8 @@ class TabVendProFormHelper(FormHelper):
     layout = Layout(
                 Fieldset(
                     '<i class="fa fa-search"></i> Busca Registros RVendPro',       
-                    InlineField('cd_Almoxarifado'),
-                    InlineField('dt_Venda'),
+                    InlineField('cd_almoxarifado'),
+                    InlineField('dt_venda'),
                 ),
                 FormActions(
                     StrictButton(

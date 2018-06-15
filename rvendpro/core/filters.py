@@ -7,5 +7,5 @@ class TabVendProFilter(django_filters.FilterSet):
   
   class Meta:
     model = TabVendPro
-    fields = ['cd_Almoxarifado', 'nr_Contrato', 'dt_Venda', 'no_descricao', 'nr_Minuta', 'Vl_Cont']
+    fields = ['cd_almoxarifado', 'nr_contrato', 'dt_venda', 'no_descricao', 'nr_minuta', 'vl_cont']
     order_by = ['pk']

@@ -1,3 +1,4 @@
+from django.shortcuts import render, render_to_response
 from django.views.generic import ListView
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models.query_utils import Q
@@ -32,9 +33,17 @@ class TabVendProView(PagedFilteredTableView):
     def get_context_data(self, **kwargs):
         context = super(TabVendProView, self).get_context_data(**kwargs)
         # here...
-        context['nav_customer'] = True
+        context['nav_tabvendpro'] = True
         search_query = self.get_queryset()
         table = TabVendProTable(search_query)
         RequestConfig(self.request, paginate={'per_page': 30}).configure(table)
         context['table'] = table
         return context
+
+# here... Creating a separate class; Refactor Details Page Strategy
+# tabvendpro-detail
+def venda_detail(request, *args, **kwargs):
+    print ('args...:', args)
+    print ('kargs...:', kwargs)
+    #return render(request, 'tabvendpro_detail.html', {'data': {}})
+    return render(request, 'tabvendpro_detail.html', {'data': args})

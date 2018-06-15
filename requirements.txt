@@ -1,8 +1,13 @@
 dj-database-url==0.5.0
 dj-static==0.0.6
 Django==2.0.6
+django-bootstrap3==10.0.1
+django-crispy-forms==1.7.2
+django-filter==1.1.0
+django-tables2==1.21.2
+gunicorn==19.8.1
+psycopg2==2.7.4
+psycopg2-binary==2.7.4
 python-decouple==3.1
 pytz==2018.4
 static3==0.7.0
-gunicorn==19.8.1
-psycopg2==2.7.4

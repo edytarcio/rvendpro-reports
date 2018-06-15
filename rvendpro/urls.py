@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from rvendpro.core.views import TabVendProView
+from rvendpro.core import views 
 
 urlpatterns = [
     #path('', rvendpro.core.views.home),
-    path('', TabVendProView.as_view()),
+    path('', views.TabVendProView.as_view(), name=''),
+    path('venda_detail', views.venda_detail, name='venda_detail'),
     #path('staging/', rvendpro.staging.views.home),
     path('admin/', admin.site.urls),
 ]

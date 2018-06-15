@@ -4,7 +4,7 @@
 {% load title from django_tables2 %}
 {% load trans blocktrans from i18n %}
 
-{% block "content" %}
+{% block content %}
 
 
 {% if table.page %}
@@ -17,14 +17,11 @@
             {% block table.thead %}
             <thead>                 
                 <tr>
-                    <th><a href="{% url "customer-add" %}" class="btn btn-small btn-primary dark"><span class="hidden-phone"><i class="fa fa-user-plus"></i> Add Customer</span></a>
-                      
-                    </th>                  
                     <th colspan="5">                                         
                         <form method="post" class="form-inline form-search pull-right">
                           {% csrf_token %}
                             <div>
-                              <input id="search_form_id" name="search" type="text" class="form-control col-md-3" placeholder="ID, Name, Account #, ZIP"{% if search %} value="{{ search }}"{% endif %}>
+                              <input id="search_form_id" name="search" type="text" class="form-control col-md-3" placeholder="Descricao Produto"{% if search %} value="{{ search }}"{% endif %}>
                               <button type="submit" class="btn btn-small btn-dark"><i class="fa fa-search"></i> Search</button>
                             </div>              
                         </form>
@@ -76,4 +73,4 @@
 {% endif %}
 
 
-{% endblock "content" %}
+{% endblock content %}
